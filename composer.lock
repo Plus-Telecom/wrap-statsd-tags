@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "5ad85176b574cf0906a92e35d330d2af",
-    "content-hash": "3c40854889d40e23e9efaa89377d6d58",
+    "hash": "1e171cd51b8d246a9dc3a275352b27b8",
+    "content-hash": "21ca320e1c4ccc2c191899ea0569be53",
     "packages": [
         {
             "name": "domnikl/statsd",
