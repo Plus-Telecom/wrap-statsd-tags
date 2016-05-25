@@ -19,7 +19,15 @@
 },
 ...
 ```
+## .env
 
+
+```
+STATSD_HOST=localhost
+STATSD_PORT=8125
+STATSD_NAMESPACE=find-uk
+STATSD_TRACKING=true
+```
 
 ## Usage
 
@@ -29,7 +37,7 @@ use Plustelecom\Statsd\Statsd;
 
 ...
 
-Statsd::client()->increment("welcome");
+Statsd::increment("welcome");
 
 
 ```
