@@ -10,8 +10,12 @@ class Statsd {
     private static $client;
 
     public static function init() {
-        $connection = new UdpSocket(env('STATSD_HOST', 'localhost'), env('STATSD_PORT', 8125));
-        self::$client = new Client($connection, env('STATSD_NAMESPACE', ''));
+        if (env('STATSD_TRACKING', false) == true) {
+            $connection = new UdpSocket(env('STATSD_HOST', 'localhost'), env('STATSD_PORT', 8125));
+            self::$client = new Client($connection, env('STATSD_NAMESPACE', ''));
+        } else {
+            die('Tracking is disabled');
+        }
     }
 
     public static function client(){
