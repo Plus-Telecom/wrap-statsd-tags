@@ -10,7 +10,8 @@
     ],
     "minimum-stability": "stable",
     "require": {
-        "domnikl/statsd": "~2.0"
+        "domnikl/statsd": "~2.0",
+        "illuminate/support": "^5.2"
     },
     "autoload": {
         "psr-4": {

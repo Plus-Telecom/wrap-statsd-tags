@@ -26,4 +26,10 @@ class Statsd {
             self::client()->increment($key);
         }
     }
+
+    public static function gauge($key, $value){
+        if (self::$tracking) {
+            self::client()->gauge($key, $value);
+        }
+    }
 }
