@@ -57,6 +57,7 @@ use Plustelecom\Statsd\Statsd;
 ...
 
 Statsd::increment("welcome");
+Statsd::gauge("total-users","200");
 
 
 ```
