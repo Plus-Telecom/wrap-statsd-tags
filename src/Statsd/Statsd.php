@@ -34,4 +34,11 @@ class Statsd {
             self::client()->gauge($key, $value);
         }
     }
+
+    public static function timing($key, $value){
+        self::client();
+        if (self::$tracking) {
+            self::client()->timing($key, $value);
+        }
+    }
 }

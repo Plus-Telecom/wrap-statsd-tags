@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "d957ae743f593e55597f69758c049cdd",
+    "hash": "6d5050b18338cd547d8c5ed15539f6fc",
     "content-hash": "e35ad5b035f46337b2744932b537407e",
     "packages": [
         {
@@ -76,16 +76,16 @@
         },
         {
             "name": "domnikl/statsd",
-            "version": "2.4.0",
+            "version": "2.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/domnikl/statsd-php.git",
-                "reference": "c2208ecd631b3635cb121a8b9047803c0e1b54cf"
+                "reference": "f1a443f6ff2cae6bab46ebe8e27576d9b4cbeabf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/domnikl/statsd-php/zipball/c2208ecd631b3635cb121a8b9047803c0e1b54cf",
-                "reference": "c2208ecd631b3635cb121a8b9047803c0e1b54cf",
+                "url": "https://api.github.com/repos/domnikl/statsd-php/zipball/f1a443f6ff2cae6bab46ebe8e27576d9b4cbeabf",
+                "reference": "f1a443f6ff2cae6bab46ebe8e27576d9b4cbeabf",
                 "shasum": ""
             },
             "require": {
@@ -119,20 +119,20 @@
                 "statsd",
                 "udp"
             ],
-            "time": "2016-04-23 09:29:46"
+            "time": "2016-07-06 07:58:06"
         },
         {
             "name": "illuminate/contracts",
-            "version": "v5.2.32",
+            "version": "v5.2.45",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/contracts.git",
-                "reference": "411b851962c211078ade7664a6976e77a78cd2a5"
+                "reference": "22bde7b048a33c702d9737fc1446234fff9b1363"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/contracts/zipball/411b851962c211078ade7664a6976e77a78cd2a5",
-                "reference": "411b851962c211078ade7664a6976e77a78cd2a5",
+                "url": "https://api.github.com/repos/illuminate/contracts/zipball/22bde7b048a33c702d9737fc1446234fff9b1363",
+                "reference": "22bde7b048a33c702d9737fc1446234fff9b1363",
                 "shasum": ""
             },
             "require": {
@@ -156,25 +156,25 @@
             "authors": [
                 {
                     "name": "Taylor Otwell",
-                    "email": "taylorotwell@gmail.com"
+                    "email": "taylor@laravel.com"
                 }
             ],
             "description": "The Illuminate Contracts package.",
             "homepage": "http://laravel.com",
-            "time": "2016-03-07 20:37:17"
+            "time": "2016-08-08 11:46:08"
         },
         {
             "name": "illuminate/support",
-            "version": "v5.2.32",
+            "version": "v5.2.45",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/support.git",
-                "reference": "61329ea409362fdae167fdca1125f46c997ce689"
+                "reference": "510230ab62a7d85dc70203f4fdca6fb71a19e08a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/support/zipball/61329ea409362fdae167fdca1125f46c997ce689",
-                "reference": "61329ea409362fdae167fdca1125f46c997ce689",
+                "url": "https://api.github.com/repos/illuminate/support/zipball/510230ab62a7d85dc70203f4fdca6fb71a19e08a",
+                "reference": "510230ab62a7d85dc70203f4fdca6fb71a19e08a",
                 "shasum": ""
             },
             "require": {
@@ -183,6 +183,9 @@
                 "illuminate/contracts": "5.2.*",
                 "paragonie/random_compat": "~1.4",
                 "php": ">=5.5.9"
+            },
+            "replace": {
+                "tightenco/collect": "self.version"
             },
             "suggest": {
                 "illuminate/filesystem": "Required to use the composer class (5.2.*).",
@@ -212,12 +215,12 @@
             "authors": [
                 {
                     "name": "Taylor Otwell",
-                    "email": "taylorotwell@gmail.com"
+                    "email": "taylor@laravel.com"
                 }
             ],
             "description": "The Illuminate Support package.",
             "homepage": "http://laravel.com",
-            "time": "2016-05-14 16:24:10"
+            "time": "2016-08-05 14:49:58"
         },
         {
             "name": "paragonie/random_compat",
