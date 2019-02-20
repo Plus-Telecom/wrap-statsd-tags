@@ -12,7 +12,7 @@ class Statsd {
 
     public static function init() {
         $connection = new UdpSocket(env('STATSD_HOST', 'localhost'), env('STATSD_PORT', 8125));
-        self::$client = new Client($connection, env('STATSD_NAMESPACE', ''));
+        self::$client = new Client($connection);
         self::$tracking = env('STATSD_TRACKING', false) === true;
     }
 
@@ -24,21 +24,28 @@ class Statsd {
     public static function increment($key){
         self::client();
         if (self::$tracking) {
-            self::client()->increment($key);
+            self::client()->increment(self::addTags($key));
         }
     }
 
     public static function gauge($key, $value){
         self::client();
         if (self::$tracking) {
-            self::client()->gauge($key, $value);
+            self::client()->gauge(self::addTags($key), $value);
         }
     }
 
     public static function timing($key, $value){
         self::client();
         if (self::$tracking) {
-            self::client()->timing($key, $value);
+            self::client()->timing(self::addTags($key), $value);
         }
+    }
+
+    private static function addTags($key){
+        //add service
+        $key .= ",service=".env('STATSD_NAMESPACE');
+
+        return $key;
     }
 }
