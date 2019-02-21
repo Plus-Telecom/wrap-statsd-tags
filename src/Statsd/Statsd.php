@@ -11,41 +11,64 @@ class Statsd {
     private static $tracking = true;
 
     public static function init() {
-        $connection = new UdpSocket(env('STATSD_HOST', 'localhost'), env('STATSD_PORT', 8125));
-        self::$client = new Client($connection);
-        self::$tracking = env('STATSD_TRACKING', false) === true;
+        try {
+
+            $connection = new UdpSocket(env('STATSD_HOST', 'localhost'), env('STATSD_PORT', 8125));
+            self::$client = new Client($connection);
+            self::$tracking = env('STATSD_TRACKING', false) === true;
+
+        } catch (\Exception $e) {}
     }
 
     public static function client(){
-        if (is_null(self::$client)) self::init();
-        return self::$client;
+        try {
+
+            if (is_null(self::$client)) self::init();
+            return self::$client;
+
+        } catch (\Exception $e) {}
+
+        return null;
     }
 
     public static function increment($key){
-        self::client();
-        if (self::$tracking) {
-            self::client()->increment(self::addTags($key));
-        }
+        try {
+
+            self::client();
+            if (self::$tracking) {
+                self::client()->increment(self::addTags($key));
+            }
+        } catch (\Exception $e) {}
     }
 
     public static function gauge($key, $value){
-        self::client();
-        if (self::$tracking) {
-            self::client()->gauge(self::addTags($key), $value);
-        }
+        try {
+
+            self::client();
+            if (self::$tracking) {
+                self::client()->gauge(self::addTags($key), $value);
+            }
+        } catch (\Exception $e) {}
     }
 
     public static function timing($key, $value){
-        self::client();
-        if (self::$tracking) {
-            self::client()->timing(self::addTags($key), $value);
-        }
+        try {
+
+            self::client();
+            if (self::$tracking) {
+                self::client()->timing(self::addTags($key), $value);
+            }
+        } catch (\Exception $e) {}
     }
 
     private static function addTags($key){
-        //add service
-        $key .= ",service=".env('STATSD_NAMESPACE');
+        try {
+            //add service
+            $key .= ",service=".env('STATSD_NAMESPACE');
 
-        return $key;
+            return $key;
+        } catch (\Exception $e) {}
+
+        return "";
     }
 }
