@@ -9,7 +9,7 @@
 "repositories":[
     {
         "type": "vcs",
-        "url": "https://github.com/Plus-Telecom/wrap-statsd.git"
+        "url": "https://github.com/Plus-Telecom/wrap-statsd-tags.git"
     }
 ],
 "require": {
