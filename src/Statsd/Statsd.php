@@ -41,6 +41,17 @@ class Statsd {
         } catch (\Exception $e) {}
     }
 
+    public static function count($key, $val = 1, float $sampleRate = 1.0){
+        try {
+
+            self::client();
+            if (self::$tracking) {
+                self::client()->count(self::addTags($key), $val, $sampleRate);
+            }
+        } catch (\Exception $e) {}
+    }
+    
+
     public static function gauge($key, $value){
         try {
 
