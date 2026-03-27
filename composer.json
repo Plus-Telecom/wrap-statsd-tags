@@ -9,15 +9,24 @@
         }
     ],
     "minimum-stability": "stable",
-    "require": {
-        "domnikl/statsd": "~2.0"
-    },
     "autoload": {
         "psr-4": {
             "Plustelecom\\Statsd\\": "src/Statsd/"
         }
     },
+    "require": {
+        "plus-telecom/statsd-php": "dev-main"
+    },
     "require-dev": {
-        "illuminate/support": "^5.2"
-    }
+        "illuminate/support": "10.0"
+    },
+    "audit": {
+        "block-insecure": false
+    },
+    "repositories":[
+        {
+            "type": "vcs",
+            "url": "https://github.com/Plus-Telecom/statsd-php.git"
+        }
+    ]
 }
