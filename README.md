@@ -10,6 +10,10 @@
     {
         "type": "vcs",
         "url": "https://github.com/Plus-Telecom/wrap-statsd-tags.git"
+    },
+    {
+        "type": "vcs",
+        "url": "https://github.com/Plus-Telecom/statsd-php.git"
     }
 ],
 "require": {
