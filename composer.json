@@ -15,7 +15,7 @@
         }
     },
     "require": {
-        "plus-telecom/statsd-php": "dev-main"
+        "plus-telecom/statsd-php": "^1.0"
     },
     "require-dev": {
         "illuminate/support": "10.0"

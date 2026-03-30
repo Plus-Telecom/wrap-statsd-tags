@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1b89aad568b79f230c5e940a9949520f",
+    "content-hash": "93e52e5497dd7c837a5761ffb98000cb",
     "packages": [
         {
             "name": "plus-telecom/statsd-php",
-            "version": "dev-main",
+            "version": "1.0.0",
             "source": {
                 "type": "git",
                 "url": "git@github.com:Plus-Telecom/statsd-php.git",
-                "reference": "bc1cd24f27261eabb7701c82bbe1d662ec6b80bc"
+                "reference": "b871d8d443be120b51d5fe5c865c50df4a7619aa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Plus-Telecom/statsd-php/zipball/bc1cd24f27261eabb7701c82bbe1d662ec6b80bc",
-                "reference": "bc1cd24f27261eabb7701c82bbe1d662ec6b80bc",
+                "url": "https://api.github.com/repos/Plus-Telecom/statsd-php/zipball/b871d8d443be120b51d5fe5c865c50df4a7619aa",
+                "reference": "b871d8d443be120b51d5fe5c865c50df4a7619aa",
                 "shasum": ""
             },
             "require": {
@@ -31,7 +31,6 @@
                 "phpunit/phpunit": "^9",
                 "vimeo/psalm": "^4.6"
             },
-            "default-branch": true,
             "type": "library",
             "autoload": {
                 "psr-4": {
@@ -62,10 +61,10 @@
                 "udp"
             ],
             "support": {
-                "source": "https://github.com/Plus-Telecom/statsd-php/tree/main",
+                "source": "https://github.com/Plus-Telecom/statsd-php/tree/1.0.0",
                 "issues": "https://github.com/Plus-Telecom/statsd-php/issues"
             },
-            "time": "2026-03-27T12:48:14+00:00"
+            "time": "2026-03-30T13:47:56+00:00"
         }
     ],
     "packages-dev": [
@@ -1247,9 +1246,7 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "plus-telecom/statsd-php": 20
-    },
+    "stability-flags": {},
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {},
