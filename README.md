@@ -66,5 +66,3 @@ Statsd::gauge("total-users","200");
 
 ```
 
-
-Ref: http://domnikl.github.io/statsd-php/
