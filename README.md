@@ -61,8 +61,10 @@ use Plustelecom\Statsd\Statsd;
 ...
 
 Statsd::increment("welcome");
-Statsd::gauge("total-users","200");
+Statsd::increment('cron-check,type=auto_topups');
 
+Statsd::gauge("total-users","200");
+Statsd::gauge("get-balance,provider=dtone,currency=GBP", 'GBP');
 
 ```
 
